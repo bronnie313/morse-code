@@ -21,6 +21,6 @@ def decode_message(message)
   words.map { |word| decode_word(word) }.join(' ')
 end
 
-result = decode_char(".-")
+result = decode_char('.-')
 
 puts result
