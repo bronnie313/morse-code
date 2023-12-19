@@ -10,5 +10,15 @@ def decode_char(char)
    MORSE_CODE.key(char) || ''
 end
 
-result = decode_char(".-")
+def decode_word(word)
+    characters = word.split(' ')
+    characters.map { |char| decode_char(char) }.join
+end
+
+def decode(message)
+    sentence = message.split('   ')
+    sentence.map { |word| decode_word(word) }.join(' ')
+end
+
+result = decode("-- -.--   -. .- -- .")
 puts result
